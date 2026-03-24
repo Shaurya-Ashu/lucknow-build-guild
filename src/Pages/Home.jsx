@@ -4,6 +4,7 @@ import Patti from '../components/Patti'
 import Workshops from '../components/Workshops'
 import Timeline from '../components/Timeline'
 import Robo from '../components/Robo'
+import Sponsors from '../components/Sponsors'
 import Contact from '../components/Contact'
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
       <Workshops />
       <Timeline />
       <Robo />
+      <Sponsors />
       <Contact />
     </div>
   )

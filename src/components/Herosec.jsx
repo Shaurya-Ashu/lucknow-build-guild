@@ -65,10 +65,6 @@ const Herosec = () => {
             className="bg-[#FACC15] text-[#15294D] font-bold text-base md:text-lg px-8 py-4 rounded hover:bg-yellow-300 transition-colors">
             Join Us →
           </a>
-          <a href="/faqs"
-            className="border border-[#FACC15]/50 text-[#FACC15] font-bold text-base md:text-lg px-8 py-4 rounded hover:bg-[#FACC15]/10 transition-colors">
-            Learn More
-          </a>
         </div>
 
         {/* Countdown */}
