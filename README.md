@@ -1,3 +1,4 @@
 #Lucknow Build Guild
 
-<img width="1587" height="2245" alt="Copy of Free food" src="https://github.com/user-attachments/assets/ea49f046-e447-4137-9f3b-861d5e9af712" />
+
+![WhatsApp Image 2026-03-23 at 11 15 11](https://github.com/user-attachments/assets/a6444e63-bfaa-4a3b-be4c-de114e67bcfd)
