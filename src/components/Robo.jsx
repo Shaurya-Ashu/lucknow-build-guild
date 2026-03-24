@@ -38,7 +38,7 @@ const Robo = () => {
           ))}
         </div>
 
-        <a href="http://blueprint.hackclub.com/guilds/invite/lucknow"
+        <a href="https://gas.hackclub.com/"
           className='bg-[#FACC15] text-[#15294D] font-bold text-lg px-10 py-4 rounded hover:bg-yellow-300 transition-colors'>
           Apply for Gas Fund →
         </a>
