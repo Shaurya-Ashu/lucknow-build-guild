@@ -3,7 +3,7 @@ import Contact from '../components/Contact'
 
 const organizers = [
   { name: "Shaurya Ashu", role: "Organizer", img: "/img/pic1.jpg" },
-  { name: "Atharv Shukla", role: "Organizer & Web Dev", img: "/img/idk_who.jpg" },
+  { name: "Atharv Shukla", role: "Organizer & Web Dev", img: "/img/osho.jpg" },
   { name: "Krishna Singh", role: "Organizer", img: "/img/kura.png" },
   
   
