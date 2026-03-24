@@ -70,7 +70,7 @@ const Herosec = () => {
         </div>
 
         <div className="flex flex-wrap gap-4 pt-6 border-t border-[#657795]/30">
-          {[["📅", "April 19, 2026"], ["📍", "Lucknow"], ["🏛️", "Venue: TBA"]].map(([icon, text]) => (
+          {[["", "April 19, 2026"], ["", "Lucknow"], ["", "Venue: TBA"]].map(([icon, text]) => (
             <span key={text} className="text-white/50 text-sm flex items-center gap-1.5">
               {icon} {text}
             </span>
