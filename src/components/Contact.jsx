@@ -1,75 +1,38 @@
 import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faMicrosoft, faYahoo, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faSlack } from "@fortawesome/free-brands-svg-icons";
-
-
-
-
+import { faInstagram, faSlack } from "@fortawesome/free-brands-svg-icons";
 
 const Contact = () => {
   return (
-    <div className="w-full h-[25vw] bg-[#0F172A] rounded-tl-4xl">
-      <h1 className="text-[4vw] font-bold text-white pt-10">CONTACT US</h1>
-      <div className='w-full border-t-2 border-white flex flex-col justify-between' >
-         
-       <div className='pl-5 pt-5'>
-          
-         <h1 className='text-white'>OTHER</h1>
-         
-          <a
-          href="https://instagram.com/lucknow_build_guild"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center space-x-2 text-white hover:text-[#FACC15]"
-        >
-          <FontAwesomeIcon icon={faInstagram} />
-          <span>Instagram</span>
-        </a>
-           <a
-          href="https://app.slack.com/client/E09V59WQY1E/C0AM3G39X3M"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center space-x-2 text-white hover:text-[#FACC15]"
-        >
-          <FontAwesomeIcon icon={faSlack} />
-          <span>Slack Channel</span>
-        </a>
-       </div>
-    <div className="top-0 left-0 flex flex-col items-end justify-end pr-5">
-            <h1 className='text-white'>EMAIL</h1>
-         <a
-          href="mailto:lucknowguild@gmail.com"
-          className="flex items-center space-x-2 text-white hover:text-[#FACC15]"
-        >
-
-          <FontAwesomeIcon icon={faEnvelope} />
-          <span>lucknowguild@gmail.com</span>
-        </a>
-          <a
-          href="mailto:lucknowguild@gmail.com"
-          className="flex items-center space-x-2 text-white hover:text-[#FACC15]"
-        >
-          <FontAwesomeIcon icon={faEnvelope} />
-          <span>lucknowguild@gmail.com</span>
-        </a>
-           <a
-          href="mailto:kuratus89@gmail.com"
-          className="flex items-center space-x-2 text-white hover:text-[#FACC15]"
-        >
-          <FontAwesomeIcon icon={faEnvelope} />
-          <span>kuratus89@gmail.com</span>
-        </a>
-           <a
-          href="mailto:atharvshukla466@gmail.com"
-          className="flex items-center space-x-2 text-white hover:text-[#FACC15]"
-        >
-          <FontAwesomeIcon icon={faEnvelope} />
-          <span>atharvshukla466@gmail.com</span>
-        </a>
-         </div>
+    <div className="w-full bg-[#0F172A] rounded-tl-3xl px-6 md:px-16 py-12">
+      <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">CONTACT US</h1>
+      <div className="border-t border-white/20 pt-8 grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div>
+          <h2 className="text-[#FACC15] text-xs font-bold tracking-widest uppercase mb-4">Social</h2>
+          <a href="https://instagram.com/lucknow_build_guild" target="_blank" rel="noopener noreferrer"
+            className="flex items-center gap-3 text-white hover:text-[#FACC15] mb-3 transition-colors">
+            <FontAwesomeIcon icon={faInstagram} />
+            <span>@lucknow_build_guild</span>
+          </a>
+          <a href="https://app.slack.com/client/E09V59WQY1E/C0AM3G39X3M" target="_blank" rel="noopener noreferrer"
+            className="flex items-center gap-3 text-white hover:text-[#FACC15] transition-colors">
+            <FontAwesomeIcon icon={faSlack} />
+            <span>#build-guild-lucknow</span>
+          </a>
+        </div>
+        <div>
+          <h2 className="text-[#FACC15] text-xs font-bold tracking-widest uppercase mb-4">Email</h2>
+          {["lucknowguild@gmail.com", "kuratus89@gmail.com", "atharvshukla466@gmail.com"].map(email => (
+            <a key={email} href={`mailto:${email}`}
+              className="flex items-center gap-3 text-white hover:text-[#FACC15] mb-3 transition-colors">
+              <FontAwesomeIcon icon={faEnvelope} />
+              <span>{email}</span>
+            </a>
+          ))}
+        </div>
       </div>
+      <p className="text-white/30 text-xs mt-10">© 2026 Blueprint Lucknow Guild · Sponsored by Hack Club</p>
     </div>
   )
 }

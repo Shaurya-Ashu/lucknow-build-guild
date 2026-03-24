@@ -1,54 +1,47 @@
-import { useGSAP } from '@gsap/react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/all'
-import React, { useRef } from 'react'
+import React from 'react'
+import Contact from '../components/Contact'
 
-const About = () => {
+const organizers = [
+  { name: "Shaurya Ashu", role: "Lead Organizer", img: "/img/pic1.jpg" },
+  { name: "Atharv Shukla", role: "Web Dev", img: "/img/pic2.jpg" },
+  { name: "Krishna Singh", role: "Organizer", img: "/img/pic3.jpg" },
+]
 
+const About = () => (
+  <div className="w-full min-h-screen bg-[#0A365D] flex flex-col">
+    <div className="pt-24 pb-16 px-6 md:px-16 max-w-6xl mx-auto w-full flex-1">
+      <h1 className="text-4xl md:text-7xl font-extrabold text-[#FACC15] mb-4">MEET THE TEAM</h1>
+      <p className="text-white/60 text-base md:text-lg mb-16 max-w-2xl">
+        Blueprint Lucknow Guild is organized by three teen makers from Lucknow, backed by Hack Club.
+      </p>
 
-  const imgDivRef = useRef(null)
-  const imgRef = useRef(null)
-  const imgArray = [ '/img/pic1.jpg',
-  '/img/pic2.jpg',
-  '/img/pic3.jpg',
- ]
-  gsap.registerPlugin(ScrollTrigger)
-  useGSAP(function(){
-    gsap.to(
-      imgDivRef.current,{
-        scrollTrigger:{
-          trigger:imgDivRef.current,
-         
-          start:'top 22% ',
-          end:'top -200%',
-          scrub:true,
-          pin:true,
-          onUpdate:function(elem){
-         var imageindex = Math.floor(elem.progress*imgArray.length)
-         console.log(imageindex )
-         imgRef.current.src = imgArray[imageindex]
-          }
-        }
-      }
-    )
-  })  
-  return (
-    <div>
-     <div className="overflow-hidden text-[#FACC15]">
-       <div   ref={imgDivRef}
-        className='absolute h-[75vh] w-[30vw] bg-red-900  top-5 right-5 overflow-hidden rounded-3xl '>
-        <img ref={imgRef} className='h-full w-full object-cover' src='/img/pic1.jpg'/>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-20">
+        {organizers.map((o) => (
+          <div key={o.name} className="flex flex-col items-center text-center">
+            <div className="w-40 h-40 md:w-52 md:h-52 rounded-2xl overflow-hidden mb-4 border-2 border-[#FACC15]/30">
+              <img src={o.img} alt={o.name} className="w-full h-full object-cover" />
+            </div>
+            <h2 className="text-white font-bold text-xl">{o.name}</h2>
+            <p className="text-[#FACC15] text-sm font-medium mt-1">{o.role}</p>
+          </div>
+        ))}
       </div>
-      <div className="sec1 w-full bg-[#0A365D] h-screen">
-        <h1 className='text-[#FACC15] text-[12vh] pt-6 '>MEET OUR ORGANISERS</h1>
-        <h1 className='text-[#FACC15] text-[10vh]'>ATHARV SHUKLA</h1>
-        <p className=' text-[#FACC15] text-[5vh]'>WEB DEV</p>
+
+      <div className="bg-white/5 rounded-2xl p-8 md:p-12 border border-white/10 max-w-3xl">
+        <h2 className="text-[#FACC15] font-extrabold text-2xl md:text-4xl mb-4">About the Event</h2>
+        <p className="text-white/80 text-base md:text-lg leading-relaxed">
+          Blueprint Lucknow Guild is a free, one-day hardware workshop and meetup for teens aged 13–18, 
+          organized in Lucknow and sponsored by Hack Club. Attendees build real electronics from scratch, 
+          meet fellow makers, and leave with two projects they built themselves — plus surprise gifts.
+        </p>
+        <a href="https://blueprint.hackclub.com/guilds/invite/lucknow"
+          className="inline-block mt-6 bg-[#FACC15] text-[#0A365D] font-bold px-6 py-3 rounded hover:bg-yellow-300 transition-colors">
+          Register for April 19 →
+        </a>
       </div>
-      <div className="sec2 w-full bg-[#0A365D] h-screen"></div>
-      <div className="sec3 w-full bg-[#0A365D] h-screen"></div>
-     </div>
     </div>
-  )
-}
+    <Contact />
+  </div>
+)
 
 export default About
