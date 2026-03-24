@@ -1,4 +1,3 @@
-
 import React from "react";
 import Navbar from "./components/Navbar";
 import { Routes, Route } from "react-router-dom";
@@ -9,9 +8,8 @@ import About from "./Pages/About";
 
 const App = () => {
   return (
-    <div className="relative overflow-x-hidden bg-[#0A365D]">
-      <Navbar className="relative z-10" />
-
+    <div className="grid-bg relative overflow-x-hidden min-h-screen">
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
